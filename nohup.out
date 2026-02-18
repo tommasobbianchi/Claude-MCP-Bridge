@@ -272,3 +272,103 @@ INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
 INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
 INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
 INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Claude_MCP_Bridge && git add -A && git commit -m \"fix: add --no-session-persistence to", "working_directory": "/home/tommaso/projects/Claude_MCP_Bridge", "exit_code": 0, "elapsed_seconds": 0.02, "output_preview": "[main 387e837] fix: add --no-session-persistence to prevent claude CLI hanging in subprocess\n 2 files changed, 275 insertions(+)\n create mode 100644 nohup.out\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:14:22.001316Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:mcp.server.streamable_http_manager:StreamableHTTP session manager shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [597723]
+{"host": "127.0.0.1", "port": 8787, "event": "server_starting", "level": "info", "timestamp": "2026-02-18T20:15:06.993704Z"}
+{"allowed_dirs": ["/home/tommaso/projects"], "oauth_enabled": true, "event": "server_configured", "level": "info", "timestamp": "2026-02-18T20:15:07.014712Z"}
+INFO:     Started server process [599420]
+INFO:     Waiting for application startup.
+INFO:mcp.server.streamable_http_manager:StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8787 (Press CTRL+C to quit)
+INFO:     160.79.106.108:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.108:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.108:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.108:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.108:0 - "POST /token HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.107:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.108:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.108:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /register HTTP/1.1" 201 Created
+INFO:     160.79.106.108:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.108:0 - "POST /register HTTP/1.1" 201 Created
+INFO:     160.79.106.20:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.20:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.20:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.20:0 - "POST /register HTTP/1.1" 201 Created
+INFO:     100.103.234.2:0 - "GET /authorize?response_type=code&client_id=_Yrmr8KRKcusUpm0KQaJNeHvO2qvOoV6&redirect_uri=https%3A%2F%2Fclaude.ai%2Fapi%2Fmcp%2Fauth_callback&code_challenge=Mxto1bCaKtQrUTN2a9OUORtCTGvxxWAwoTW617SBof8&code_challenge_method=S256&state=db5m953F0dy0Wg8T-VYne9nVIlqT2QeMoGW8OIBuWkA&resource=https%3A%2F%2Fnativedev.tail7d3518.ts.net%2Fmcp HTTP/1.1" 302 Found
+INFO:     160.79.106.20:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.20:0 - "POST /token HTTP/1.1" 200 OK
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 618ca7d982404ea99230416645b09c58
+INFO:     160.79.106.108:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.108:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.108:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: ad73ef448d9e434ea4d0c439233afd17
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 1337886caae147789bcb54b03be6535b
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "grep \"no-session\" ~/projects/Claude_MCP_Bridge/src/mcp_bridge/tools/claude_execute.py", "working_directory": "/home/tommaso/projects", "exit_code": 0, "elapsed_seconds": 0.0, "output_preview": "                \"--no-session-persistence\",\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:17:16.333429Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: a2640972051b4ee5b04b38279edf9068
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cat ~/projects/Claude_MCP_Bridge/src/mcp_bridge/tools/claude_execute.py | grep -A5 \"create_subproces", "working_directory": "/home/tommaso/projects", "exit_code": 0, "elapsed_seconds": 0.01, "output_preview": "            proc = await asyncio.create_subprocess_exec(\n                *cmd,\n                cwd=str(cwd),\n                stdout=asyncio.subprocess.PIPE,\n                stderr=asyncio.subprocess.PIPE,\n                env=env,\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:17:24.271429Z"}
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: e28be2c4e2c649e18e405dddd5ad3837
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.110:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Claude_MCP_Bridge && sed -i 's/stderr=asyncio.subprocess.PIPE,/stderr=asyncio.subproce", "working_directory": "/home/tommaso/projects/Claude_MCP_Bridge", "exit_code": 0, "elapsed_seconds": 0.01, "output_preview": "\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:17:34.542337Z"}
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: b682ffc0ae8048c7be6e8d39496fa207
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Claude_MCP_Bridge && grep -A3 \"create_subprocess\" src/mcp_bridge/tools/claude_execute.", "working_directory": "/home/tommaso/projects/Claude_MCP_Bridge", "exit_code": 0, "elapsed_seconds": 0.0, "output_preview": "            proc = await asyncio.create_subprocess_exec(\n                *cmd,\n                cwd=str(cwd),\n                stdout=asyncio.subprocess.PIPE,\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:17:43.598227Z"}
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: d769e588a6554599b153320d32df8171
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Claude_MCP_Bridge && grep -A6 \"create_subprocess\" src/mcp_bridge/tools/claude_execute.", "working_directory": "/home/tommaso/projects/Claude_MCP_Bridge", "exit_code": 0, "elapsed_seconds": 0.0, "output_preview": "            proc = await asyncio.create_subprocess_exec(\n                *cmd,\n                cwd=str(cwd),\n                stdout=asyncio.subprocess.PIPE,\n                stderr=asyncio.subprocess.PIPE,\n                stdin=asyncio.subprocess.DEVNULL,\n                env=env,\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:17:49.906654Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 24e38d9f89f443338f1b584c96b5bf87
+INFO:     160.79.106.117:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.117:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.117:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.117:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
