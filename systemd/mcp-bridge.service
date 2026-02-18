@@ -1,0 +1,21 @@
+[Unit]
+Description=Claude MCP Bridge Server
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tommaso
+Group=tommaso
+WorkingDirectory=/home/tommaso/projects/Claude_MCP_Bridge
+ExecStart=/home/tommaso/.local/bin/uv run mcp-bridge
+Restart=always
+RestartSec=5
+Environment=PATH=/home/tommaso/.local/bin:/usr/local/bin:/usr/bin:/bin
+
+# Security hardening
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
