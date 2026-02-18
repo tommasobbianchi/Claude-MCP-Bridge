@@ -57,6 +57,7 @@ def register(
                 "--max-turns",
                 str(max_turns),
                 "--verbose",
+                "--no-session-persistence",
             ]
             if output_format == "json":
                 cmd.extend(["--output-format", "json"])

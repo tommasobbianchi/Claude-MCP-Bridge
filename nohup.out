@@ -1,0 +1,274 @@
+{"host": "127.0.0.1", "port": 8787, "event": "server_starting", "level": "info", "timestamp": "2026-02-18T20:04:32.496808Z"}
+{"allowed_dirs": ["/home/tommaso/projects"], "oauth_enabled": true, "event": "server_configured", "level": "info", "timestamp": "2026-02-18T20:04:32.518765Z"}
+INFO:     Started server process [597723]
+INFO:     Waiting for application startup.
+INFO:mcp.server.streamable_http_manager:StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8787 (Press CTRL+C to quit)
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.100:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /token HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.110:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /register HTTP/1.1" 201 Created
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.100:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /register HTTP/1.1" 201 Created
+INFO:     100.103.234.2:0 - "GET /authorize?response_type=code&client_id=CXcf-R3hsFHFWoVinWJwb3gDejwylHSg&redirect_uri=https%3A%2F%2Fclaude.ai%2Fapi%2Fmcp%2Fauth_callback&code_challenge=YovWzEoRHZbry8ptLj5NJMy7QWakQtpl_rOsW83utWs&code_challenge_method=S256&state=mnv1sRr47Z_o7TSFBmsdBSOWz-t2TNjA1TBeY1f7n-E&resource=https%3A%2F%2Fnativedev.tail7d3518.ts.net%2Fmcp HTTP/1.1" 302 Found
+INFO:     160.79.106.100:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /token HTTP/1.1" 200 OK
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 0c0afb039b4a4a4ca4168f961ef1f32f
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 401 Unauthorized
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.100:0 - "GET /.well-known/oauth-protected-resource/mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 786bc1b698e44ad3a567cb643d8941fe
+INFO:     160.79.106.100:0 - "GET /.well-known/oauth-authorization-server HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.110:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /register HTTP/1.1" 201 Created
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 12598c9a5b624a5ba519cb5d08af1f55
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 05cf9957308040eb8f01d1b3dcef4bb4
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListResourcesRequest
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 0b65d5b52f1144e488955dba30556780
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: c7c0ae0b153b442896e71932a5bbe89b
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Scan2Step && timeout 15 claude -p \"just reply with: hello world\" --max-turns 1 2>&1 ||", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 15.05, "output_preview": "EXIT: 124\n\n--- Exit code: 0 | Time: 15.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:07:31.604672Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: f7b65cd7f4fa4272b7657a5512312ef8
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "claude --help 2>&1 | head -40", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 0.37, "output_preview": "Usage: claude [options] [command] [prompt]\n\nClaude Code - starts an interactive session by default, use -p/--print for\nnon-interactive output\n\nArguments:\n  prompt                                            Your prompt\n\nOptions:\n  --add-dir <directories...>                        Additional directories to allow tool access to\n  --agent <agent>                                   Agent for the current session. Overrides the 'agent' setting.\n  --agents <json>                                   JSON ob... [truncated, total 4523 chars]", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:07:43.858938Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 0d703d54a2284e61b6fb2b95af6a52fc
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "claude --version 2>&1", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 0.16, "output_preview": "2.1.45 (Claude Code)\n\n--- Exit code: 0 | Time: 0.2s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:08:04.374924Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 39dc6255d32b484596287b24c8c4d9bb
+INFO:     160.79.106.20:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.20:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.20:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.20:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 0730f1aaf73c42ae9a7368b5b38b2668
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.116:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListResourcesRequest
+{"command_preview": "cd ~/projects/Scan2Step && timeout 20 claude --print --dangerously-skip-permissions --max-turns 1 \"r", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 20.05, "output_preview": "EXIT: 124\n\n--- Exit code: 0 | Time: 20.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:08:42.095785Z"}
+INFO:     160.79.106.20:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http:Terminating session: 0730f1aaf73c42ae9a7368b5b38b2668
+INFO:     160.79.106.116:0 - "DELETE /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: da36dc28a5a040d085a5947e03140f8b
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Scan2Step && timeout 15 claude --print --max-turns 1 \"say hi\" 2>/tmp/claude_stderr.txt", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 15.05, "output_preview": "EXIT: 124\n--- STDOUT ---\n--- STDERR ---\n\n--- Exit code: 0 | Time: 15.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:09:08.620323Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 71440db23fa047e7a7535d130a660d83
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListResourcesRequest
+INFO:     160.79.106.100:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 9c8ea17e490a4a09ad687bdc04330187
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "env | grep -i \"HOME\\|USER\\|PATH\\|CLAUDE\\|XDG\\|TERM\\|NODE\" | sort", "working_directory": "/home/tommaso/projects", "exit_code": 0, "elapsed_seconds": 0.01, "output_preview": "ALLOWED_DIRS_RAW=/home/tommaso/projects\nBLOCKED_COMMANDS_RAW=rm\\s+-rf\\s+/|shutdown|reboot|mkfs|dd\\s+if=|chmod\\s+777\\s+/|:\\(\\)\\{|passwd|userdel|groupdel\nCLAUDE_CLI_PATH=claude\nCLAUDE_DEFAULT_MAX_TURNS=5\nCLAUDE_MAX_TIMEOUT=600\nDBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus\nHOME=/home/tommaso\nLOG_DIR=/home/tommaso/.local/share/mcp-bridge\nMAX_CONCURRENT_CLAUDE=3\nOLDPWD=/home/tommaso/projects\nPATH=/home/tommaso/projects/Claude_MCP_Bridge/.venv/bin:/home/tommaso/.local/bin:/home/tommaso/bin:/ho... [truncated, total 973 chars]", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:10:47.439440Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 46c65b743448456c8274aadb0a58e493
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "which claude && file $(which claude) && ls -la $(which claude)", "working_directory": "/home/tommaso/projects", "exit_code": 0, "elapsed_seconds": 0.01, "output_preview": "/home/tommaso/.local/bin/claude\n/home/tommaso/.local/bin/claude: symbolic link to /home/tommaso/.local/share/claude/versions/2.1.45\nlrwxrwxrwx 1 tommaso tommaso 49 Feb 17 19:07 /home/tommaso/.local/bin/claude -> /home/tommaso/.local/share/claude/versions/2.1.45\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:10:54.543926Z"}
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 3385101c7012453b9da8c73d05e7a0d3
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "env | grep -i CLAUDE", "working_directory": "/home/tommaso/projects", "exit_code": 0, "elapsed_seconds": 0.01, "output_preview": "MAX_CONCURRENT_CLAUDE=3\nCLAUDE_MAX_TIMEOUT=600\nPATH=/home/tommaso/projects/Claude_MCP_Bridge/.venv/bin:/home/tommaso/.local/bin:/home/tommaso/bin:/home/tommaso/bin:/home/tommaso/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\nCLAUDE_DEFAULT_MAX_TURNS=5\nCLAUDE_CLI_PATH=claude\nVIRTUAL_ENV=/home/tommaso/projects/Claude_MCP_Bridge/.venv\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:11:02.026140Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 850300b4cd0f41fe81f6e9144c51d7cf
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 8f4ec943c3684111a298bd9788822b5b
+INFO:     160.79.106.108:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.116:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListResourcesRequest
+{"command_preview": "# Test: run claude CLI directly, bypass any env issues\n/home/tommaso/.local/bin/claude -p \"say pong\"", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 12.05, "output_preview": "STILL RUNNING after 12s - hanging\n\n--- Exit code: 0 | Time: 12.1s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:11:36.565403Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 4f7923744e354270aeb79bc34b14acf9
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 8b1a979ccd634105bd086335659b819c
+INFO:     160.79.106.116:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListResourcesRequest
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+{"command_preview": "# Test with explicit stdin redirect\necho \"\" | timeout 10 /home/tommaso/.local/bin/claude -p \"say pon", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 10.04, "output_preview": "pong\nEXIT: 124\n\n--- Exit code: 0 | Time: 10.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:11:56.611879Z"}
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: a95871cadd774c3a990ec29589ed03da
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: dae2b48e8201436cba3efa5271a637b7
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.20:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListResourcesRequest
+INFO:     160.79.106.108:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+{"command_preview": "timeout 10 /home/tommaso/.local/bin/claude -p \"say pong\" --max-turns 1 < /dev/null 2>&1; echo \"EXIT:", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 10.05, "output_preview": "EXIT: 124\n\n--- Exit code: 0 | Time: 10.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:12:18.208313Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: f043a12927c54ebdaebdd323a3837d50
+INFO:     160.79.106.126:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.126:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.126:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.126:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 4e90efd4fbb849d09e03fdcb1df43862
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.110:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.108:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     160.79.106.20:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListResourcesRequest
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListPromptsRequest
+INFO:     160.79.106.116:0 - "GET /mcp HTTP/1.1" 200 OK
+{"command_preview": "# With pipe it worked but hung. Try with --no-session-persistence\necho \"\" | timeout 15 /home/tommaso", "working_directory": "/home/tommaso/projects/Scan2Step", "exit_code": 0, "elapsed_seconds": 7.05, "output_preview": "pong\nEXIT: 0\n\n--- Exit code: 0 | Time: 7.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:12:37.775230Z"}
+INFO:     160.79.106.126:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: ce4e1d71a5b94874b67822946069f456
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Claude_MCP_Bridge && cat src/mcp_bridge/tools/claude_execute.py | grep -n \"print\\|dang", "working_directory": "/home/tommaso/projects/Claude_MCP_Bridge", "exit_code": 0, "elapsed_seconds": 0.01, "output_preview": "55:                \"--print\",\n56:                \"--dangerously-skip-permissions\",\n57:                \"--max-turns\",\n59:                \"--verbose\",\n63:            cmd.append(prompt)\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:12:48.861199Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 7a0d6dc787424b98861ee9c5b7070635
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Claude_MCP_Bridge && sed -i '/\"--verbose\",/a\\                \"--no-session-persistence", "working_directory": "/home/tommaso/projects/Claude_MCP_Bridge", "exit_code": 0, "elapsed_seconds": 0.01, "output_preview": "\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:12:56.430634Z"}
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: 82a19a8b73d84ec9b35c33d7f24965e8
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.100:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+{"command_preview": "cd ~/projects/Claude_MCP_Bridge && grep -A2 \"verbose\" src/mcp_bridge/tools/claude_execute.py", "working_directory": "/home/tommaso/projects/Claude_MCP_Bridge", "exit_code": 0, "elapsed_seconds": 0.0, "output_preview": "                \"--verbose\",\n                \"--no-session-persistence\",\n            ]\n\n--- Exit code: 0 | Time: 0.0s ---", "event": "run_command_completed", "level": "info", "timestamp": "2026-02-18T20:14:12.904649Z"}
+INFO:     160.79.106.100:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.streamable_http_manager:Created new transport with session ID: dce6f6e1c39b47f784a164020b6fb277
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "GET /mcp HTTP/1.1" 200 OK
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 202 Accepted
+INFO:     160.79.106.107:0 - "POST /mcp HTTP/1.1" 200 OK
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
