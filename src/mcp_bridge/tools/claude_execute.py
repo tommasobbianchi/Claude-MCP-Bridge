@@ -60,7 +60,7 @@ def register(
             ]
             if output_format == "json":
                 cmd.extend(["--output-format", "json"])
-            cmd.extend(["--prompt", prompt])
+            cmd.append(prompt)
 
             # CRITICAL: unset CLAUDECODE env vars so claude CLI can start
             env = os.environ.copy()
