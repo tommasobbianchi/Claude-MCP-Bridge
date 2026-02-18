@@ -7,12 +7,13 @@ from dotenv import load_dotenv
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
+from mcp.server.auth.settings import AuthSettings, ClientRegistrationOptions, RevocationOptions
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
 
-from mcp_bridge.auth import BearerTokenMiddleware
 from mcp_bridge.audit import get_logger, setup_logging
 from mcp_bridge.config import get_settings
+from mcp_bridge.oauth_provider import InMemoryOAuthProvider
 from mcp_bridge.rate_limiter import ConcurrencyLimiter, RateLimiter
 from mcp_bridge.tools import register_all_tools
 
@@ -26,6 +27,23 @@ def create_app() -> tuple:
     logger = get_logger("server")
     logger.info("server_starting", host=settings.host, port=settings.port)
 
+    # OAuth provider and auth settings
+    oauth_provider = InMemoryOAuthProvider()
+
+    auth_settings = None
+    if settings.public_url:
+        auth_settings = AuthSettings(
+            issuer_url=settings.public_url,
+            resource_server_url=settings.public_url + "/mcp",
+            client_registration_options=ClientRegistrationOptions(
+                enabled=True,
+                valid_scopes=["mcp:tools"],
+                default_scopes=["mcp:tools"],
+            ),
+            revocation_options=RevocationOptions(enabled=True),
+            required_scopes=[],
+        )
+
     # Disable DNS rebinding protection — Tailscale Funnel changes the Host header
     mcp = FastMCP(
         name="claude-mcp-bridge",
@@ -36,12 +54,14 @@ def create_app() -> tuple:
         ),
         host=settings.host,
         port=settings.port,
+        auth_server_provider=oauth_provider if auth_settings else None,
+        auth=auth_settings,
         transport_security=TransportSecuritySettings(
             enable_dns_rebinding_protection=False,
         ),
     )
 
-    # Health check endpoint (no auth required)
+    # Health check endpoint
     @mcp.custom_route("/health", methods=["GET"])
     async def health_check(request: Request) -> JSONResponse:
         return JSONResponse({
@@ -59,19 +79,16 @@ def create_app() -> tuple:
     # Register all tools
     register_all_tools(mcp, settings, rate_limiter, concurrency_limiter)
 
-    # Build the Starlette app (includes session manager lifespan)
-    starlette_app = mcp.streamable_http_app()
+    # Build the Starlette app (includes OAuth routes + auth middleware)
+    app = mcp.streamable_http_app()
 
-    # Wrap with Bearer token auth middleware
-    authed_app = BearerTokenMiddleware(
-        app=starlette_app,
-        token=settings.bearer_token,
-        exclude_paths={"/health"},
+    logger.info(
+        "server_configured",
+        allowed_dirs=[str(d) for d in settings.allowed_dirs],
+        oauth_enabled=bool(auth_settings),
     )
 
-    logger.info("server_configured", allowed_dirs=[str(d) for d in settings.allowed_dirs])
-
-    return authed_app, settings
+    return app, settings
 
 
 def main() -> None:

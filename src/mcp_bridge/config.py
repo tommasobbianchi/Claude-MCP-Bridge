@@ -38,6 +38,7 @@ class Settings(BaseSettings):
     host: str = "127.0.0.1"
     port: int = 8787
     log_level: str = "INFO"
+    public_url: str = ""  # e.g. https://nativedev.tail7d3518.ts.net:10000
 
     # Audit
     log_dir: Path = Path.home() / ".local/share/mcp-bridge"
