@@ -15,7 +15,11 @@ class Settings(BaseSettings):
     )
 
     # Auth
-    bearer_token: str
+    bearer_token: str  # also the secret typed into the /approve gate
+
+    # Client IDs configured by hand in the client UI (comma-separated). These
+    # never go through /register, so they must be pre-seeded to be accepted.
+    static_client_ids_raw: str = ""
 
     # Sandbox — stored as raw strings, parsed in model_post_init
     allowed_dirs_raw: str = str(Path.home() / "projects")
@@ -43,6 +47,10 @@ class Settings(BaseSettings):
     # Audit
     log_dir: Path = Path.home() / ".local/share/mcp-bridge"
     max_log_size_mb: int = 50
+
+    @property
+    def static_client_ids(self) -> list[str]:
+        return [c.strip() for c in self.static_client_ids_raw.split(",") if c.strip()]
 
     def model_post_init(self, __context: object) -> None:
         if self.allowed_dirs_raw and not self.allowed_dirs:

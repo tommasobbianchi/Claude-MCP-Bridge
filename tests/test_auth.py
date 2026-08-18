@@ -19,7 +19,20 @@ from pydantic import AnyUrl
 
 @pytest.fixture
 def provider():
-    return InMemoryOAuthProvider()
+    return InMemoryOAuthProvider(public_url="http://localhost:9999")
+
+
+async def approved_code(provider, client, params):
+    """Run /authorize and then the operator approval, returning the usable code.
+
+    authorize() no longer hands the code straight to the client — it parks it
+    behind the /approve gate. Tests that need a redeemable code go through the
+    same two steps a real operator does.
+    """
+    held = await provider.authorize(client, params)
+    code = held.split("code=")[1].split("&")[0]
+    provider.release_pending(code)
+    return code
 
 
 @pytest.fixture
@@ -90,12 +103,21 @@ async def test_authorize_and_exchange(provider):
         code_challenge="challenge123",
         code_challenge_method="S256",
     )
-    redirect_url = await provider.authorize(client, params)
-    assert "code=" in redirect_url
-    assert "state=test-state" in redirect_url
+    # /authorize parks the code at the approval gate, NOT at the client
+    held = await provider.authorize(client, params)
+    assert held.startswith("http://localhost:9999/approve?code=")
+    assert "localhost/callback" not in held
 
-    # Extract code from redirect URL
-    code = redirect_url.split("code=")[1].split("&")[0]
+    code = held.split("code=")[1].split("&")[0]
+
+    # Unapproved: the code must not be redeemable yet
+    assert await provider.load_authorization_code(client, code) is None
+
+    # Approving releases it to the real client redirect, state intact
+    released = provider.release_pending(code)
+    assert released.startswith("http://localhost/callback")
+    assert f"code={code}" in released
+    assert "state=test-state" in released
 
     auth_code = await provider.load_authorization_code(client, code)
     assert auth_code is not None
@@ -111,6 +133,33 @@ async def test_authorize_and_exchange(provider):
 
 
 @pytest.mark.asyncio
+async def test_unapproved_code_is_never_redeemable(provider):
+    """Regression: the attacker who starts the flow sees the code in the
+    /approve URL. If it were redeemable before approval they could skip the
+    gate entirely and go straight to /token. It must stay inert until released.
+    """
+    client = await _register_client(provider)
+    params = AuthorizationParams(
+        client_id=client.client_id,
+        redirect_uri=AnyUrl("http://localhost/callback"),
+        redirect_uri_provided_explicitly=True,
+        state="s",
+        scopes=["mcp:tools"],
+        code_challenge="c",
+        code_challenge_method="S256",
+    )
+    held = await provider.authorize(client, params)
+    code = held.split("code=")[1].split("&")[0]
+
+    assert await provider.load_authorization_code(client, code) is None
+
+    # A denied/abandoned attempt can never be resurrected
+    provider.drop_pending(code)
+    assert provider.release_pending(code) is None
+    assert await provider.load_authorization_code(client, code) is None
+
+
+@pytest.mark.asyncio
 async def test_refresh_token_flow(provider):
     client = await _register_client(provider)
     params = AuthorizationParams(
@@ -122,8 +171,7 @@ async def test_refresh_token_flow(provider):
         code_challenge="c",
         code_challenge_method="S256",
     )
-    redirect_url = await provider.authorize(client, params)
-    code = redirect_url.split("code=")[1].split("&")[0]
+    code = await approved_code(provider, client, params)
     auth_code = await provider.load_authorization_code(client, code)
     token = await provider.exchange_authorization_code(client, auth_code)
 
@@ -150,8 +198,7 @@ async def test_expired_auth_code(provider):
         code_challenge="c",
         code_challenge_method="S256",
     )
-    redirect_url = await provider.authorize(client, params)
-    code = redirect_url.split("code=")[1].split("&")[0]
+    code = await approved_code(provider, client, params)
 
     # Expire the code manually
     provider._auth_codes[code].expires_at = time.time() - 1
@@ -171,8 +218,7 @@ async def test_expired_access_token(provider):
         code_challenge="c",
         code_challenge_method="S256",
     )
-    redirect_url = await provider.authorize(client, params)
-    code = redirect_url.split("code=")[1].split("&")[0]
+    code = await approved_code(provider, client, params)
     auth_code = await provider.load_authorization_code(client, code)
     token = await provider.exchange_authorization_code(client, auth_code)
 
@@ -194,8 +240,7 @@ async def test_revoke_access_token(provider):
         code_challenge="c",
         code_challenge_method="S256",
     )
-    redirect_url = await provider.authorize(client, params)
-    code = redirect_url.split("code=")[1].split("&")[0]
+    code = await approved_code(provider, client, params)
     auth_code = await provider.load_authorization_code(client, code)
     token = await provider.exchange_authorization_code(client, auth_code)
 
@@ -219,8 +264,7 @@ async def test_wrong_client_cannot_load_code(provider):
         code_challenge="c",
         code_challenge_method="S256",
     )
-    redirect_url = await provider.authorize(client_a, params)
-    code = redirect_url.split("code=")[1].split("&")[0]
+    code = await approved_code(provider, client_a, params)
 
     # Client B cannot load Client A's code
     assert await provider.load_authorization_code(client_b, code) is None
