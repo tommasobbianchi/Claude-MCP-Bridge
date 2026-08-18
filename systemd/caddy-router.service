@@ -1,0 +1,19 @@
+[Unit]
+Description=Caddy Reverse Proxy Router
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tommaso
+Group=tommaso
+# Creates /run/caddy owned by tommaso (and removes it on stop). The admin API
+# listens on /run/caddy/admin.sock instead of tcp/2019 — see the Caddyfile.
+RuntimeDirectory=caddy
+ExecStart=/home/tommaso/.local/bin/caddy run --config /home/tommaso/.config/caddy/Caddyfile
+ExecReload=/home/tommaso/.local/bin/caddy reload --config /home/tommaso/.config/caddy/Caddyfile
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
